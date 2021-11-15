@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 
 
 // const URL = 'mongodb+srv://kauly:rockstar23@cluster0.zlwvy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-const URL = 'mongodb://localhost:27017/SkillsAudit'
+const URL = process.env.mongodb||'mongodb://localhost:27017/SkillsAudit'
 
 const data_connection = mongoose.connect(URL, {});
 
