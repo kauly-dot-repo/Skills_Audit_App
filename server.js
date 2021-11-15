@@ -1,3 +1,4 @@
+const PORT= process.env.PORT || 8120;
 const history = require('connect-history-api-fallback');
 const express = require('express');
 const app = express();
@@ -639,7 +640,7 @@ app.post('/update-other-rating', (req, res) => {
 });
 
 
-const PORT = 8120;
+// const PORT = 8120;
 app.listen(PORT, () => {
   console.log("Server is running on Port " + PORT);
 });
